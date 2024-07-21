@@ -1,0 +1,6 @@
+  # Fury CLI
+  export RANGER_FURY_LOCATION=/Users/igferreira/.fury
+  export RANGER_FURY_VENV_LOCATION=/Users/igferreira/.fury/fury_venv
+  declare FURY_BIN_LOCATION="/Users/igferreira/.fury/fury_venv/bin"
+  export PATH="$PATH:$FURY_BIN_LOCATION"
+

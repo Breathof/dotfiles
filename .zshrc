@@ -2,17 +2,11 @@ HOSTNAME=$(hostname)
 WORK_HOSTNAME="UY000CXL935W9H2"
 
 if [[ "$HOSTNAME" == "$WORK_HOSTNAME" ]]; then
-  # Fury CLI
-  export RANGER_FURY_LOCATION=/Users/igferreira/.fury
-  export RANGER_FURY_VENV_LOCATION=/Users/igferreira/.fury/fury_venv
-  declare FURY_BIN_LOCATION="/Users/igferreira/.fury/fury_venv/bin"
-  export PATH="$PATH:$FURY_BIN_LOCATION"
+  source ~/.furyrc
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # Homebrew
-  export PATH="/opt/homebrew/bin:$PATH"
-fi
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Zinit plugin manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -51,7 +45,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview "ls --color $realpath"
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview "ls --color $realpath" 
 
 # Oh my posh
-# TODO: Install it if not aviable
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 	# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin.omp.json)"
