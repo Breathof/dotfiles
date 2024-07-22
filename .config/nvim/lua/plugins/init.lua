@@ -10,6 +10,10 @@ return {
     "github/copilot.vim",
     lazy = false
   },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    lazy = false
+  }
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {

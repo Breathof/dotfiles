@@ -1,6 +1,7 @@
 # Git 
 alias pull="git pull"
 alias change="git checkout"
+aliase cloviscredentials='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_clovis;'
 
 # Meta aliases
 alias aliases="nvim ~/.aliases"
