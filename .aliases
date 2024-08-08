@@ -1,7 +1,7 @@
 # Git 
 alias pull="git pull"
 alias change="git checkout"
-aliase cloviscredentials='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_clovis;'
+alias cloviscredentials='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_clovis;'
 
 # Meta aliases
 alias aliases="nvim ~/.aliases"
@@ -11,3 +11,10 @@ alias zrc="nvim ~/.zshrc"
 
 # Server
 alias accio="ssh root@172.233.0.108"
+
+# exa
+alias ls='exa --icons --color=always --group-directories-first'
+alias ll='exa -alF --icons --color=always --group-directories-first'
+alias la='exa -a --icons --color=always --group-directories-first'
+alias l='exa -F --icons --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
